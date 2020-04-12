@@ -1,0 +1,38 @@
+@mixin sides($option, $nb) {
+  #{$option}: {
+    left: $nb;
+    right: $nb;
+  };
+}
+
+@mixin vertical($option, $nb) {
+  #{$option}: {
+    top: $nb;
+    bottom: $nb;
+  };
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin google-font($family: false, $sizes: ()) {
+  $family: str-replace($family, ' ', '+');
+  $url: 'https://fonts.googleapis.com/css?family=#{$family}:';
+  $i: 0;
+  @each $size in $sizes {
+    $i: $i + 1;
+    $url: $url + '#{$size}';
+    @if($i < length($sizes))
+    {
+        $url: $url + ',';
+    }
+  }
+  @at-root {
+    @import url('#{$url}');
+  }
+}

@@ -1,0 +1,19 @@
+@each $font in $fonts {
+  @include google-font(nth($font, 1), nth($font, 2));
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
+	font-size: $fontBase;
+	font-family: $fontPrimary;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: $backgroundColor;
+  color: $primaryColor;
+}

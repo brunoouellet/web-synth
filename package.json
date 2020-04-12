@@ -1,0 +1,33 @@
+{
+  "name": "web-synth",
+  "version": "1.0.0",
+  "description": "A virtual synthesizer for the web.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunoouellet/web-synth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunoouellet/web-synth/issues"
+  },
+  "homepage": "https://github.com/brunoouellet/web-synth#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.5.0",
+    "sass": "^1.26.3"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

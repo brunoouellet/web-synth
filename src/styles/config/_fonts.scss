@@ -1,0 +1,22 @@
+// Font weights
+$thin: 100 !default;
+$light: 300 !default;
+$regular: 400 !default;
+$medium: 500 !default;
+$semibold: 600 !default;
+$bold: 700 !default;
+$black: 900 !default;
+
+$saira: 'Saira Semi Condensed' !default;
+
+$fonts: (
+  ($saira, ($light, $medium, $bold, $black)),
+);
+
+ // Font config
+$fontPrimary: $saira, sans-serif !default;
+
+// Font sizes
+$fontBase: 18px !default;
+
+$textSize: $fontBase;
