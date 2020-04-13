@@ -10,7 +10,9 @@ export default class App extends React.Component {
       <div id="main">
         <Header />
         <Controls />
-        <Keys keys={keyMapping} />
+        <footer>
+          <Keys keys={keyMapping} />
+        </footer>
       </div>
     );
   }

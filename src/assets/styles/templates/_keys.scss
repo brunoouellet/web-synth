@@ -1,5 +1,61 @@
+$keyTextColor: #808080;
 $whiteKeyColor: $wt;
-$whiteKeyPressedColor: #d9d9d9;
-$blackKeyColor: #363636;
-$blackKeyPressedColor: $bk;
+$whiteKeyPressedColor: darken($whiteKeyColor, 20%);
+$blackKeyColor: #262626;
+$blackKeyPressedColor: darken($blackKeyColor, 20%);
+$keySize: 80px;
+$keyGutter: 6px;
 
+.keys {
+  width: 50%;
+  height: $keysHeight;
+}
+
+.row {
+  width: 80%;
+  height: 100px;
+  @include vertical('padding', 10px);
+  @include sides('margin', auto);
+  @include clearfix;
+  &.row-white {
+    .key {
+      background-color: $whiteKeyColor;
+      &.pressed {
+        background-color: $whiteKeyPressedColor;
+      }
+    }
+  }
+  &.row-black {
+    .key {
+      background-color: $blackKeyColor;
+      &.pressed {
+        background-color: $blackKeyPressedColor;
+      }
+      &:first-child {
+        margin-left: $keySize / 2;
+      }
+      &:nth-child(3) {
+        margin-left: $keySize + ($keyGutter * 3);
+      }
+    }
+  }
+}
+
+.key {
+  width: $keySize;
+  height: $keySize;
+  border-radius: 5px;
+  @include sides('margin', $keyGutter);
+  color: $keyTextColor;
+  text-align: center;
+  float: left;
+  cursor: pointer;
+  .note {
+    margin-top: 2px;
+    font-size: 15px;
+  }
+  .char {
+    line-height: 63px;
+    font-size: 38px;
+  }
+}

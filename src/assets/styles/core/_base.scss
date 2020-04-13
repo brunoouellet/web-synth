@@ -2,6 +2,10 @@
   @include google-font(nth($font, 1), nth($font, 2));
 }
 
+* {
+	box-sizing: border-box;
+}
+
 html, body {
 	width: 100%;
 	height: 100%;

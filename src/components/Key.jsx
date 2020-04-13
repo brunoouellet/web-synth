@@ -1,7 +1,40 @@
 import React from 'react';
 
 export default class Key extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pressed: false
+    };
+
+    this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.handleMouseUp = this.handleMouseUp.bind(this);
+  }
+
+  handleMouseDown() {
+    this.press(true);
+  }
+
+  handleMouseUp() {
+    this.press(false);
+  }
+
+  press(isPressed) {
+    this.setState({
+      pressed: isPressed
+    });
+  }
+
+  renderNote() {
+    return this.props.noteAlternative ? this.props.noteAlternative + '/ ' + this.props.note : this.props.note;
+  }
+
   render() {
-    return <div></div>;
+    return (
+      <div className={`key ${this.state.pressed ? 'pressed' : ''}`} onMouseDown={this.handleMouseDown} onMouseUp={this.handleMouseUp}>
+        <div className="note">{this.renderNote()}</div>
+        <div className="char">{this.props.char}</div>
+      </div>
+    );
   }
 }

@@ -2,67 +2,67 @@ const keyMapping = [
   {
     key: 'A',
     note: 'C',
-    code: 65
+    noteAlternative: null
   },
   {
     key: 'W',
     note: 'C#',
-    code: 87
+    noteAlternative: 'D♭'
   },
   {
     key: 'S',
     note: 'D',
-    code: 83
+    noteAlternative: null
   },
   {
     key: 'E',
     note: 'D#',
-    code: 69
+    noteAlternative: 'E♭'
   },
   {
     key: 'D',
     note: 'E',
-    code: 68
+    noteAlternative: null
   },
   {
     key: 'F',
     note: 'F',
-    code: 70
+    noteAlternative: null
   },
   {
     key: 'T',
     note: 'F#',
-    code: 84
+    noteAlternative: 'G♭'
   },
   {
     key: 'G',
     note: 'G',
-    code: 71
+    noteAlternative: null
   },
   {
     key: 'Y',
     note: 'G#',
-    code: 89
+    noteAlternative: 'A♭'
   },
   {
     key: 'H',
     note: 'A',
-    code: 72
+    noteAlternative: null
   },
   {
     key: 'U',
     note: 'A#',
-    code: 85
+    noteAlternative: 'B♭'
   },
   {
     key: 'J',
     note: 'B',
-    code: 74
+    noteAlternative: null
   },
   {
     key: 'K',
     note: 'C',
-    code: 75
+    noteAlternative: null
   }
 ];
 
