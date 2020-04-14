@@ -12,19 +12,26 @@ export default class Keys extends React.Component {
 
   addKeyboardListeners() {
     const self = this;
-    const events = [
-      {name: 'keydown', press: true},
-      {name: 'keyup', press: false}
-    ];
+    const fired = [];
 
-    for (let event of events) {
-      document.addEventListener(event.name, e => {
-        const keyName = e.key.toLowerCase();
-        if (self.references.hasOwnProperty(keyName)) {
-          self.references[keyName].current.press(event.press);
+    document.addEventListener('keydown', event => {
+      const keyName = event.key.toLowerCase();
+      if (!fired.includes(keyName) && self.references.hasOwnProperty(keyName)) {
+        self.references[keyName].current.press(true);
+        fired.push(keyName);
+      }
+    });
+
+    document.addEventListener('keyup', event => {
+      const keyName = event.key.toLowerCase();
+      if (self.references.hasOwnProperty(keyName)) {
+        self.references[keyName].current.press(false);
+        const index = fired.indexOf(keyName);
+        if (index > -1) {
+          fired.splice(index, 1);
         }
-      });
-    }
+      }
+    });
   }
 
   getOrCreateRef(id) {

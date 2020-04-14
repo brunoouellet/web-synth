@@ -1,4 +1,5 @@
 import React from 'react';
+import synth from '../synth/synth';
 
 export default class Key extends React.Component {
   constructor(props) {
@@ -9,6 +10,7 @@ export default class Key extends React.Component {
 
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleMouseUp = this.handleMouseUp.bind(this);
+    this.baseOctave = 4;
   }
 
   handleMouseDown() {
@@ -23,6 +25,12 @@ export default class Key extends React.Component {
     this.setState({
       pressed: isPressed
     });
+
+    if (isPressed) {
+      synth.triggerAttack(this.props.note + this.baseOctave, '+0.05');
+    } else {
+      synth.triggerRelease(this.props.note + this.baseOctave, '+0.05');
+    }
   }
 
   renderNote() {
