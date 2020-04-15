@@ -64,6 +64,6 @@ const keyMapping = [
     note: 'C',
     noteAlternative: null
   }
-];
+]
 
-export default keyMapping;
+export default keyMapping

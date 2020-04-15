@@ -4,6 +4,7 @@
   "description": "A virtual synthesizer for the web.",
   "main": "index.js",
   "scripts": {
+    "lint": "standard --fix",
     "dev": "parcel index.html",
     "build": "parcel build index.html"
   },
@@ -24,7 +25,8 @@
     "babel-preset-react": "^6.24.1",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^1.5.0",
-    "sass": "^1.26.3"
+    "sass": "^1.26.3",
+    "standard": "^14.3.3"
   },
   "dependencies": {
     "react": "^16.13.1",

@@ -1,19 +1,19 @@
-import React from 'react';
-import Header from './Header';
-import Controls from './Controls';
-import Keys from './Keys';
-import keyMapping from '../helpers/keyMapping';
+import React from 'react'
+import Header from './Header'
+import Controls from './Controls'
+import Keys from './Keys'
+import keyMapping from '../helpers/keyMapping'
 
 export default class App extends React.Component {
-  render() {
+  render () {
     return (
-      <div id="main">
+      <div id='main'>
         <Header />
         <Controls />
         <footer>
           <Keys keys={keyMapping} />
         </footer>
       </div>
-    );
+    )
   }
 }

@@ -1,6 +1,5 @@
-import Synth from 'tone/Tone/instrument/Synth';
-import PolySynth from 'tone/Tone/instrument/PolySynth';
+import Tone from 'tone'
 
-const synth = new PolySynth(4, Synth).toMaster();
+const synth = new Tone.PolySynth(4, Tone.Synth).toMaster()
 
-export default synth;
+export default synth

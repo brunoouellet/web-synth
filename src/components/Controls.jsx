@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 export default class Controls extends React.Component {
-  render() {
-    return <section className="controls"></section>;
+  render () {
+    return <section className='controls' />
   }
 }

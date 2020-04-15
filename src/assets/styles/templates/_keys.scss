@@ -7,15 +7,14 @@ $keySize: 80px;
 $keyGutter: 6px;
 
 .keys {
-  width: 60%;
+  width: 736px;
+  @include sides('margin', auto);
   height: $keysHeight;
 }
 
 .row {
-  width: 80%;
   height: 92px;
   @include vertical('padding', $keyGutter);
-  @include sides('margin', auto);
   @include clearfix;
   &.row-white {
     .key {
