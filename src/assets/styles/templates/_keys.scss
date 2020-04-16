@@ -7,7 +7,7 @@ $keySize: 80px;
 $keyGutter: 6px;
 
 .keys {
-  width: 736px;
+  width: 920px;
   @include sides('margin', auto);
   height: $keysHeight;
 }
@@ -33,7 +33,7 @@ $keyGutter: 6px;
       &:first-child {
         margin-left: $keySize / 2;
       }
-      &:nth-child(3) {
+      &:nth-child(3), &:nth-child(6) {
         margin-left: $keySize + ($keyGutter * 3);
       }
     }

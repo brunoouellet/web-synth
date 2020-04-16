@@ -27,9 +27,9 @@ export default class Key extends React.Component {
     })
 
     if (isPressed) {
-      synth.triggerAttack(this.props.note + this.baseOctave, '+0.05')
+      synth.triggerAttack(this.props.note + this.props.octave, '+0.05')
     } else {
-      synth.triggerRelease(this.props.note + this.baseOctave, '+0.05')
+      synth.triggerRelease(this.props.note + this.props.octave, '+0.05')
     }
   }
 

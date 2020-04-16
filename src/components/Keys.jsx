@@ -46,7 +46,7 @@ export default class Keys extends React.Component {
   }
 
   createKey (key) {
-    return <Key ref={this.getOrCreateRef(key.key.toLowerCase())} key={key.key} char={key.key} note={key.note} noteAlternative={key.noteAlternative} />
+    return <Key ref={this.getOrCreateRef(key.key.toLowerCase())} key={key.key} char={key.key} note={key.note} noteAlternative={key.noteAlternative} octave={key.octave} />
   }
 
   render () {
